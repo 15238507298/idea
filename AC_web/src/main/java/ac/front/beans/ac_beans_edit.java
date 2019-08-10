@@ -1,6 +1,7 @@
-package ac.demo.com.ac.front.beans;
+package ac.front.beans;
 
 import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 

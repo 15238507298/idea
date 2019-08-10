@@ -1,12 +1,10 @@
-package ac.demo.com.ac.front.beans;
+package ac.front.beans;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+
 @Entity
 @Data
 public class acl_beans_user implements Serializable {

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ac.front.mapper.acl_username">
+    <sql id="tableName">
+
+    </sql>
+
+    <insert id="insertUser" useGeneratedKeys="true">
+        insert into acl_beans_user
+        <trim prefix="(" suffix=")" suffixOverrides="," prefixOverrides=",">
+            <if test="uid != null">
+                uid,
+            </if>
+            <if test="uname != null">
+                uname,
+            </if>
+            <if test="upass != null">
+                upass,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="email != null">
+                email,
+            </if>
+            <if test="address!=null">
+                address,
+            </if>
+            <if test="logintime != null">
+                logintime,
+            </if>
+            <if test="headpic != null">
+                headpic,
+            </if>
+        </trim>
+        <trim prefix="values(" prefixOverrides="," suffix=")" suffixOverrides=",">
+            <if test="uid != null">
+                #{uid},
+            </if>
+            <if test="uname != null">
+                #{uname},
+            </if>
+            <if test="upass != null">
+                #{upass},
+            </if>
+            <if test="sex != null">
+                #{sex},
+            </if>
+            <if test="email != null">
+                #{email},
+            </if>
+            <if test="address!=null">
+                #{address},
+            </if>
+            <if test="logintime != null">
+                #{logintime},
+            </if>
+            <if test="headpic != null">
+                #{headpic},
+            </if>
+        </trim>
+    </insert>
+</mapper>

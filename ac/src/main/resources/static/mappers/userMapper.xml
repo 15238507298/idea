@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ac.interfaces.userInterface">
+
+    <select id="findUser" resultType="com.ac.beans.user">
+        select * from user
+    </select>
+
+    <select id="loginUser" resultType="com.ac.beans.user">
+        select * from user where username=#{username} and password=#{password}
+    </select>
+
+    <insert id="saveUser" useGeneratedKeys="true">
+        insert into user(username,password,sex)values(#{username},#{password},#{sex})
+    </insert>
+
+    <update id="changeUser">
+        update user set username=#{username},password=#{password},sex=#{sex} where id=#{id}
+    </update>
+
+    <delete id="removeUser" >
+        delete from user where id=#{id}
+    </delete>
+
+
+
+</mapper>

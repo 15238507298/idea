@@ -1,4 +1,4 @@
-package ac.demo.com.ac.background.action;
+package ac.background.action;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ac_action_bg_index {
 
     @RequestMapping(value = "index/")
-    public String bg_index(){
+    public String bg_index() {
         return "back/index";
     }
 }
